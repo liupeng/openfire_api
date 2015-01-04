@@ -54,6 +54,7 @@ private
 
   def submit_request(params)
     data = submit_http_request(build_query_uri, build_query_params(params))
+    puts data
     parse_response(data)
   end
 
