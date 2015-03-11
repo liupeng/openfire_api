@@ -54,8 +54,8 @@ private
 
   def submit_request(params)
     data = submit_http_request(build_query_uri, build_query_params(params))
-    puts "******** openfire response data********"
-    puts data
+    Rails.logger.info "******** openfire response data********"
+    Rails.logger.info data
     parse_response(data)
   end
 
